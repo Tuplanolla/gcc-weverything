@@ -21,7 +21,12 @@ command -v csi > /dev/null && test -x extract.scm || {
 	exit 1
 }
 
+mkdir tags || {
+	echo "Directory not found."
+	exit 1
+}
+
 for t in `git --git-dir "$1/.git" tag | tac`
 do
-	git --git-dir "$1/.git" --work-tree "$1" checkout "$t" && ./extract.scm "$1" > "$t"
+	git --git-dir "$1/.git" --work-tree "$1" checkout "$t" && ./extract.scm "$1" > "tags/$t"
 done
