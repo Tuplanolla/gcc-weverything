@@ -41,3 +41,10 @@ It is easy to integrate `-Weverything` with `make` by fixing the version
 or detecting automatically.
 
     CFLAGS=gcc-`gcc --version | grep -o "[0-9]\+\(\.[0-9]\)*" | head -n 1 | sed y/./_/`-release
+
+## Bugs and Limitations
+
+Throughout history GCC has used three kinds of option specification systems, so
+ there can be small variations in the extracted output.
+For example `-Wformat` was changed to `-Wformat=` when
+ version 3.4.0 was released.
