@@ -38,7 +38,7 @@ It is easy to integrate `-Weverything` with `make` by fixing the version
 
     CFLAGS=`cat gcc-4_8_0-release`
 
-or detecting automatically.
+or detecting it automatically.
 
     CFLAGS=gcc-`gcc --version | grep -o "[0-9]\+\(\.[0-9]\)*" | head -n 1 | sed y/./_/`-release
 
