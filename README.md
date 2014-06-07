@@ -34,6 +34,12 @@ The rest of the files inside the `tags` directory contain
 For example `gcc-4_8_0-release` contains
  124 warnings of which 23 are undocumented.
 
+## Installation
+
+The closest thing to an installation is downloading the option listings.
+
+    [user@computer ~]$ wget https://github.com/Tuplanolla/gcc-weverything/blob/master/tags/gcc-4_8_0-release
+
 ## Usage
 
 It is easy to integrate `-Weverything` with `make` by fixing the version
@@ -50,7 +56,7 @@ Throughout history GCC has used three kinds of option specification systems, so
  there can be small variations in the extracted output.
 For example `-Wformat` was changed to `-Wformat=` when
  version 3.4.0 was released.
-The values have to be filled in by hand if
+Such values have to be filled in by hand if
  the options are not removed.
 
 Since everything really means everything here, `-Werror` and
