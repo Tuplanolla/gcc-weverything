@@ -4,7 +4,8 @@ Clang has a handy option called `-Weverything`, which
  enables every warning built into the compiler.
 GCC has `-Wall` and `-Wextra`, but
  they only offer a few (despite their names).
-This project provides `-Weverything` for GCC.
+This project provides `-Weverything` for GCC, but
+ only for the C programming language.
 
 ## Files
 
@@ -27,7 +28,8 @@ It exists to automate using `extract.scm` and
  contains all of the potentially harmful operations, so
  one should proceed with caution.
 
-The rest of the files contain the warning options for
+The rest of the files inside the `tags` directory contain
+ the warning options for
  each of the tagged versions of GCC.
 For example `gcc-4_8_0-release` contains
  124 warnings of which 23 are undocumented.
@@ -48,3 +50,12 @@ Throughout history GCC has used three kinds of option specification systems, so
  there can be small variations in the extracted output.
 For example `-Wformat` was changed to `-Wformat=` when
  version 3.4.0 was released.
+The values have to be filled in by hand if
+ the options are not removed.
+
+Since everything really means everything here, `-Werror` and
+ warnings like, say, `-Wtraditional` are also included.
+Therefore it is almost impossible to
+ compile files without disabling some of them with `-Wno-`.
+
+    CFLAGS=`cat gcc-4_8_0-release` -Wno-error

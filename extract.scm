@@ -91,7 +91,7 @@
               (filter (lambda (ss)
                         (and (>= (length ss) 2)
                              (irregex-search "\\bW" (car ss))
-                             (irregex-search "\\bC\\b" (cadr ss))))
+                             (irregex-search "(^|\\s)C(\\s|$)" (cadr ss))))
                       (map (lambda (s)
                              (irregex-split "\n" s))
                            (irregex-split "\n\n" s)))))))
