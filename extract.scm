@@ -69,10 +69,11 @@
                                    s)))
                           (if m
                             (map (lambda (m)
-                                   (irregex-split "," (irregex-match-substring m 1)))
+                                   (irregex-split
+                                     ","
+                                     (irregex-match-substring m 1)))
                                  (irregex-extract-matches
-                                   (irregex array
-                                            'single-line)
+                                   (irregex array 'single-line)
                                    (irregex-match-substring m 1)))
                             (let ((m (irregex-search
                                        (irregex old-toplev 'single-line)
@@ -80,7 +81,9 @@
                               (if m
                                 (map (lambda (s)
                                        (list s ""))
-                                     (irregex-split "," (irregex-match-substring m 1)))
+                                     (irregex-split
+                                       ","
+                                       (irregex-match-substring m 1)))
                                 #f))))))))))
 
 (define (parse-opt s)

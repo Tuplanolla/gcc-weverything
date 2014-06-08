@@ -28,5 +28,6 @@ mkdir tags || {
 
 for t in `git --git-dir "$1/.git" tag | tac`
 do
-	git --git-dir "$1/.git" --work-tree "$1" checkout "$t" && ./extract.scm "$1" > "tags/$t"
+	git --git-dir "$1/.git" --work-tree "$1" checkout "$t" \
+			&& ./extract.scm "$1" > "tags/$t"
 done
