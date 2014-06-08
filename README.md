@@ -55,12 +55,14 @@ or detecting it automatically.
 
 ## Bugs and Limitations
 
-Throughout history GCC has used three kinds of option specification systems, so
+Throughout history GCC has used
+ three kinds of option specification systems, so
  there can be small variations in the extracted output.
 For example `-Wformat` was changed to `-Wformat=` when
  version 3.4.0 was released.
-Such values have to be filled in by hand if
- the options are not removed.
+Such options have to be
+ tweaked by hand or
+ removed.
 
 Since everything really means everything here, `-Werror` and
  warnings like, say, `-Wtraditional` are also included.
