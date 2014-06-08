@@ -51,7 +51,7 @@ It is easy to integrate `-Weverything` with `make` by fixing the version
 
 or detecting it automatically.
 
-    CFLAGS=gcc-`gcc --version | grep -o "[0-9]\+\(\.[0-9]\)*" | head -n 1 | sed y/./_/`-release
+    CFLAGS=gcc-`gcc --version | grep -o "[0-9]\+\(\.[0-9]\)*" | head -n 1 | tr . _`-release
 
 ## Bugs and Limitations
 
