@@ -2,10 +2,13 @@
 
 Clang has a handy option called `-Weverything`, which
  enables every warning built into the compiler.
-GCC has `-Wall` and `-Wextra`, but
- they only offer a few (despite their names).
-This project provides `-Weverything` for GCC, but
- only for the C programming language.
+GCC does not.
+This project provides `-Weverything` for
+ compiling C files with GCC.
+
+Both compilers of course have `-Wall` and `-Wextra`, but
+ their names are misleading:
+ they only offer a few of the most commonly used warnings.
 
 ## Files
 
