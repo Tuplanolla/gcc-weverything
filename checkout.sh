@@ -21,7 +21,7 @@ command -v csi > /dev/null && test -x extract.scm || {
 	exit 1
 }
 
-mkdir tags || {
+mkdir -p tags || {
 	echo "Directory not found."
 	exit 1
 }

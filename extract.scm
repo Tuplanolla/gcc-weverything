@@ -29,7 +29,7 @@
   file)
 
 (defstruct opt
-  file)
+  files)
 
 (define (find-toplev s)
   (let ((ss (find-files s
@@ -42,10 +42,19 @@
 (define (find-opt s)
   (let ((ss (find-files s
                         test: ".*/c\\.opt"
-                        dotfiles: #f)))
-    (if (pair? ss)
-      (make-opt file: (car ss))
-      #f)))
+                        dotfiles: #f))
+        (ss* (find-files s
+                         test: ".*/common\\.opt"
+                         dotfiles: #f)))
+    (let ((ss (filter identity (list (if (pair? ss)
+                                       (car ss)
+                                       #f)
+                                     (if (pair? ss*)
+                                       (car ss*)
+                                       #f)))))
+      (if (pair? ss)
+        (make-opt files: ss)
+        #f))))
 
 (define (find-any s)
   (let ((ss (find-opt s)))
@@ -87,22 +96,29 @@
                                 #f))))))))))
 
 (define (parse-opt s)
-  (map (lambda (s)
-         (string-append "-" (string-trim-both s)))
-       (strings-sort
-         (map car
-              (filter (lambda (ss)
-                        (and (>= (length ss) 2)
-                             (irregex-search "\\bW" (car ss))
-                             (irregex-search "(^|\\s)C(\\s|$)" (cadr ss))))
-                      (map (lambda (s)
-                             (irregex-split "\n" s))
-                           (irregex-split "\n\n" s)))))))
+  (let ((opts "(^|\\s)C(ommon)?(\\s|$)"))
+    (map (lambda (s)
+           (string-append "-" (string-trim-both s)))
+         (strings-sort
+           (map car
+                (filter (lambda (ss)
+                          (and (>= (length ss) 2)
+                               (irregex-search "\\bW" (car ss))
+                               (irregex-search opts (cadr ss))))
+                        (map (lambda (s)
+                               (irregex-split "\n" s))
+                             (irregex-split "\n\n" s))))))))
+
+(define (read-toplev s)
+  (read-all (toplev-file s)))
+
+(define (read-opt s)
+  (string-join (map read-all (opt-files s)) "\n\n"))
 
 (define (parse-any s)
   (cond
-    ((toplev? s) (parse-toplev (read-all (toplev-file s))))
-    ((opt? s) (parse-opt (read-all (opt-file s))))
+    ((toplev? s) (parse-toplev (read-toplev s)))
+    ((opt? s) (parse-opt (read-opt s)))
     (else #f)))
 
 (let ((ss (command-line-arguments)))
