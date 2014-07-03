@@ -1,25 +1,19 @@
-Checking out files: 100% (83048/83048), done.
 Previous HEAD position was fbd6714... Update version
 HEAD is now at 9bcca88... Mark as release
-Checking out files: 100% (1149/1149), done.
 Previous HEAD position was 9bcca88... Mark as release
 HEAD is now at caa62b4... Mark as release
 Previous HEAD position was caa62b4... Mark as release
 HEAD is now at e9c762e... Mark as release
-Checking out files: 100% (19299/19299), done.
 Previous HEAD position was e9c762e... Mark as release
 HEAD is now at f22940c... Mark as release
-Checking out files: 100% (1198/1198), done.
 Previous HEAD position was f22940c... Mark as release
 HEAD is now at c9b304a... Mark as release
 Previous HEAD position was c9b304a... Mark as release
 HEAD is now at 0e3097e... Mark as release
-Checking out files: 100% (943/943), done.
 Previous HEAD position was 0e3097e... Mark as release
 HEAD is now at 93c5ebd... Mark as release
 Previous HEAD position was 93c5ebd... Mark as release
 HEAD is now at 632cb4d... Mark as release
-Checking out files: 100% (589/589), done.
 Previous HEAD position was 632cb4d... Mark as release
 HEAD is now at 3183976... Mark as release
 Previous HEAD position was 3183976... Mark as release
@@ -28,7 +22,6 @@ Previous HEAD position was e07bbb1... Mark as release
 HEAD is now at 31b6f3a... Mark as release
 Previous HEAD position was 31b6f3a... Mark as release
 HEAD is now at cc52afb... Mark as release
-Checking out files: 100% (18424/18424), done.
 Previous HEAD position was cc52afb... Mark as release
 HEAD is now at 0c2ca17... Mark as release
 Previous HEAD position was 0c2ca17... Mark as release
@@ -39,7 +32,6 @@ Previous HEAD position was 3598ee5... Mark as release
 HEAD is now at 1f8be1d... Mark as release
 Previous HEAD position was 1f8be1d... Mark as release
 HEAD is now at 72d56eb... Mark as release
-Checking out files: 100% (11019/11019), done.
 Previous HEAD position was 72d56eb... Mark as release
 HEAD is now at ed635cb... Mark as release
 Previous HEAD position was ed635cb... Mark as release
@@ -56,7 +48,6 @@ Previous HEAD position was 36b1f6c... Mark as release
 HEAD is now at d380ec4... Mark as release
 Previous HEAD position was d380ec4... Mark as release
 HEAD is now at 2728d6e... Mark as release
-Checking out files: 100% (18613/18613), done.
 Previous HEAD position was 2728d6e... Mark as release
 HEAD is now at 68b6c51... Mark as release
 Previous HEAD position was 68b6c51... Mark as release
@@ -75,7 +66,6 @@ Previous HEAD position was 16c0ea3... Mark as release
 HEAD is now at 274499b... Mark as release
 Previous HEAD position was 274499b... Mark as release
 HEAD is now at e5e549f... Mark as release
-Checking out files: 100% (261/261), done.
 Previous HEAD position was e5e549f... Mark as release
 HEAD is now at 541a9a5... Mark as release
 Previous HEAD position was 541a9a5... Mark as release
@@ -88,7 +78,6 @@ Previous HEAD position was fd3c8e1... Mark as release
 HEAD is now at a393db9... Mark as release
 Previous HEAD position was a393db9... Mark as release
 HEAD is now at abe98e3... Mark as release
-Checking out files: 100% (18631/18631), done.
 Previous HEAD position was abe98e3... Mark as release
 HEAD is now at e3a4cd3... Update version
 Previous HEAD position was e3a4cd3... Update version
@@ -99,7 +88,6 @@ Previous HEAD position was fc990f8... Mark ChangeLog
 HEAD is now at dc4eedf... Update version
 Previous HEAD position was dc4eedf... Update version
 HEAD is now at 81a2897... Update version
-Checking out files: 100% (13308/13308), done.
 Previous HEAD position was 81a2897... Update version
 HEAD is now at 359e576... Update version
 Previous HEAD position was 359e576... Update version
@@ -168,6 +156,7 @@ Previous HEAD position was 0d35959... Update for egcs-1.0.3 release.
 HEAD is now at 4f3057f... Opps.  FOrgot to update the date.
 Previous HEAD position was 4f3057f... Opps.  FOrgot to update the date.
 HEAD is now at ded0ac3... Various egcs-1.0.1 related changes.
-Checking out files: 100% (77503/77503), done.
 Previous HEAD position was ded0ac3... Various egcs-1.0.1 related changes.
 HEAD is now at 6bb2994... lots of argument passing work finished and we can compile python now
+Previous HEAD position was 9bcca88... Mark as release
+HEAD is now at a7aa383... Mark as release
