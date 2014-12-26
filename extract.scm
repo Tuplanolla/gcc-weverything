@@ -1,10 +1,10 @@
 #! /usr/bin/csi -script
 
 ; This is a "write once, run away" kind of a utility for
-;  extracting warning options from the source code of GCC by
-;  using a regular parser (irregex) for an irregular language (C).
+; extracting warning options from the source code of GCC by
+; using a regular parser (irregex) for an irregular language (C).
 ; This script takes a single command line argument that
-;  should specify where the source code is.
+; should specify where the source code is.
 
 (use data-structures)
 (use defstruct)

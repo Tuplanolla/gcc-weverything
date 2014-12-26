@@ -34,9 +34,10 @@ For example `gcc-4_8_0-release` contains
 
 ## Installation
 
-The closest thing to an installation is downloading the option listings.
+The closest thing to an installation is downloading the option listings for
+each version of interest.
 
-	[user@computer ~]$ wget https://github.com/Tuplanolla/gcc-weverything/blob/master/tags/gcc-4_8_0-release
+	[user@computer:~]$ wget https://github.com/Tuplanolla/gcc-weverything/blob/master/tags/gcc-4_8_0-release
 
 ## Usage
 
