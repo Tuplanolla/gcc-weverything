@@ -26,8 +26,8 @@ mkdir -p tags || {
 	exit 1
 }
 
-for t in gcc-4_9_2-release gcc-4_9_1-release gcc-4_9_0-release gcc-4_8_4-release gcc-4_8_3-release gcc-4_8_2-release
+for t in `git --git-dir "$1/.git" tag | tac`
 do
 	git --git-dir "$1/.git" --work-tree "$1" checkout "$t" \
-		&& ./extract.scm "$1" > "tags/$t"
+			&& ./extract.scm "$1" > "tags/$t"
 done
